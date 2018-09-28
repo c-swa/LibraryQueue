@@ -6,22 +6,22 @@ using namespace std;
 class Employee {
 private:
 	int waitTime;
-	int returnTime;
+	int retainingTime;
 	string emp_name;
 	int priority;
 
 public:
 	Employee();
+	Employee(int waitTime, int retainingTime, string name);
 	
 	//Setters
 	void setWaitTime(int newWait);
-	void setReturnTime(int newReturn);
+	void setRetainingTime(int newRetaining);
 	void setEmployeeName(string newName);
-	void setPriority(int newPriority);
 
 	//Getters
 	int getWaitTime();
-	int getReturnTime();
+	int getRetainingTime();
 	string getName();
 	int getPriority();
 
