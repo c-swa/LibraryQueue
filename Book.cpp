@@ -5,7 +5,7 @@
 //Default Constructor
 Book::Book() {
 	this->bookName = "";
-	this->archived = false;
+	this->archived = true;
 }
 
 //Constructor if values are known
@@ -13,7 +13,7 @@ Book::Book(string bookName, Date dStart, Date dEnd) {
 	this->bookName = bookName;
 	this->dStart = dStart;
 	this->dEnd = dEnd;
-	this->archived = false;
+	this->archived = true;
 }
 
 
