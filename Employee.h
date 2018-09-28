@@ -7,7 +7,7 @@ class Employee {
 private:
 	int waitTime;
 	int retainingTime;
-	string emp_name;
+	string employeeName;
 	int priority;
 
 public:

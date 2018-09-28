@@ -5,7 +5,7 @@
 Employee::Employee() {
 	this->waitTime = 0;
 	this->retainingTime = 0;
-	this->emp_name = "";
+	this->employeeName = "";
 }
 
 
@@ -13,7 +13,7 @@ Employee::Employee() {
 Employee::Employee(int waitTime, int retainingTime, string name) {
 	this->waitTime = waitTime;
 	this->retainingTime = 0;
-	this->emp_name = name;
+	this->employeeName = name;
 }
 
 //Takes in a new waiting time
@@ -31,7 +31,7 @@ void Employee::setRetainingTime(int newRetaining) {
 //Takes in a new employee name 
 //Sets the previous emp_name to newName, changes the employee's name
 void Employee::setEmployeeName(string newName) {
-	this->emp_name = newName;
+	this->employeeName = newName;
 }
 
 
@@ -51,7 +51,7 @@ int Employee::getRetainingTime() {
 //Takes in no parameters
 //Returns the emp_name
 string Employee::getName() {
-	return emp_name;
+	return employeeName;
 }
 
 //Takes in no parameters
