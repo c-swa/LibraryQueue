@@ -1,6 +1,6 @@
 #pragma once
 #include<string>
-#include<queue>
+#include "PriorityQueue.h"
 #include "Date.h"
 #include "Employee.h"
 using namespace std;
@@ -11,7 +11,7 @@ private:
 	Date dStart;
 	Date dEnd;
 	bool archived;
-	priority_queue<Employee*> queue;
+	PriorityQueue<Employee*> queue;
 public:
 	
 	//Constructors
@@ -27,7 +27,7 @@ public:
 	string getBookName();
 	Date getdStart();
 	Date getdEnd();
-	priority_queue<Employee*> getQueue();
+	PriorityQueue<Employee*> getQueue();
 
 
 	//Functions

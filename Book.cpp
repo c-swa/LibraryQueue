@@ -56,17 +56,14 @@ Date Book::getdEnd() {
 
 //Takes in a no parameters
 //Returns the queue
-priority_queue<Employee*> Book::getQueue() {
+PriorityQueue<Employee*> Book::getQueue() {
 	return this->queue;
 }
 
 //Takes in no parameters
 //Returns True if there are no Employees in queue, otherwise false
 bool Book::isArchived() {
-	if(queue.size() > 0)
-		this->archived = false;
-	else
-		this->archived = true;
+	this->archived = queue.isEmpty();
 	return this->archived;
 }
 
