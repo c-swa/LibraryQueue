@@ -76,6 +76,6 @@ void Book::addEmpToQueue(Employee* e) {
 
 //Takes in a no parameters
 //Pops the employee with the highest priority
-void Book::removeHighPrioQueue(){
+void Book::removeHighPriority(){
 	queue.pop();
 }
