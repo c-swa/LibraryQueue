@@ -1,21 +1,26 @@
+//include std libraries
+#include <list>
+//#include <map>
+#include <ostream>
+#include <string>
+
+//include developed libraries
 #include "Library.h"
 
-Library::Library()
-{
+//Class Implementation
+Library::Library() {
+	//Nothing to initialize
 }
 
-void Library::PassOn()
-{
+void Library::addBook(string bookName) {
+	allBooks.push_front(Book(bookName));
 }
 
-void Library::circulateBook()
-{
+void Library::addEmployee(string newEmployeeName) {
+	allEmployees.push_front(Employee(newEmployeeName));
+
 }
 
-void Library::addEmployee()
-{
-}
+void Library::passOn(Book book, Date date) {
 
-void Library::addBook()
-{
 }
