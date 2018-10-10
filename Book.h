@@ -11,7 +11,7 @@ private:
 	Date dStart;
 	Date dEnd;
 	bool archived;
-	PriorityQueue<Employee*> queue;
+	PriorityQueue queue;
 public:
 	
 	//Constructors
@@ -27,11 +27,11 @@ public:
 	string getBookName();
 	Date getdStart();
 	Date getdEnd();
-	PriorityQueue<Employee*> getQueue();
+	PriorityQueue getQueue();
 
 
 	//Functions
 	bool isArchived();
 	void addEmpToQueue(Employee* e);
-	void removeHighPrioQueue();
+	void removeHighPriority();
 };

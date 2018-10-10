@@ -56,7 +56,7 @@ Date Book::getdEnd() {
 
 //Takes in a no parameters
 //Returns the queue
-PriorityQueue<Employee*> Book::getQueue() {
+PriorityQueue Book::getQueue() {
 	return this->queue;
 }
 

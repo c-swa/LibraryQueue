@@ -3,31 +3,34 @@
 #include "PriorityQueue.h"
 
 
-template<typename t>
-inline void PriorityQueue<t>::push(Employee * e)
+void PriorityQueue::push(Employee * e)
 {
-	new Node front_of_queue == head; // node for the head
 
-	if (front_of_queue == NULL) { // if head is null
-		back_of_queue = new Node(e, NULL); // 
-		front_of_queue = back_of_queue;
+	if (head == NULL) { // if head is null
+		head = new Node<Employee*>; // 
+		head->data = e;
+
 	}
 	else {
-		back_of_queue->next = new Node(e, NULL);
-		back_of_queue = back_of_queue->next;
+		Node<Employee*> * temp = head;
+		while (temp != NULL) {
+			temp = temp->next;
+		}
+		Node<Employee*> * newNode = new Node<Employee*>;
+		newNode->data = e;
+		temp->next = newNode;
 	}
 	employeeCount++;
 }
 
-template<typename t>
-inline void PriorityQueue<t>::pop()
+void PriorityQueue::pop()
 {
-	Node<Employee>* temp = head;
-	Node<Employee>* highest = head;
+	Node<Employee*> * temp = head;
+	Node<Employee*> * highest = head;
 
 	//iterator to find the highest
 	while (temp != NULL) {
-		if (temp->data > highest->data)
+		if (temp->data->getPriority() > highest->data->getPriority())
 			highest = temp;
 		temp = temp->next;
 	}
@@ -35,12 +38,12 @@ inline void PriorityQueue<t>::pop()
 	//Highest is the head
 	if (highest == head) {
 		head = head->next;
-		del highest;
+		delete highest;
 	}
 
 	//Highest at end
 	 else if (highest->next == NULL) {
-		del highest;
+		delete highest;
 	}
 
 	 else {
@@ -49,9 +52,9 @@ inline void PriorityQueue<t>::pop()
 		while (temp->next != highest)
 			temp = temp->next;
 
-		Node<Employee>* temp2 = highest->next;
+		Node<Employee*>* temp2 = highest->next;
 		temp->next = temp2;
-		del highest;
+		delete highest;
 
 	}
 	//most cases

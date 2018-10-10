@@ -2,6 +2,8 @@
 //include std libraries
 #include <list>
 //#include <map>
+#include "Book.h"
+#include "Employee.h"
 #include <ostream>
 #include <string>
 

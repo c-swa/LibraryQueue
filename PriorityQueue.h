@@ -10,13 +10,12 @@ struct Node {
 	typeT data;
 };
 
-template<typename t>
 class PriorityQueue : public Employee {
 private:
 
 	//Number of employees in the queue
 	int employeeCount;
-	Node<t> * head;
+	Node<Employee*> * head;
 
 	
 
@@ -28,7 +27,7 @@ public:
 
 	//destructor
 	~PriorityQueue() {
-		Node* temp;
+		Node<Employee*>* temp;
 		while (head != NULL) {
 
 			temp = head;
