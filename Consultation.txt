@@ -1,0 +1,7 @@
+*priority is full of existing employees
+*library has the list of employees
+*queue<employee> has a list of the employees from library
+*pop - finds highest priority instead of push, because changes in push and make it inefficient
+queue<employee> should be a queue with pointers to employee, so queue<employee>
+*pass_on - gives to the next employee obviously
+*retaining and waiting times are cumulative, so we won't need separate retaining and waiting times for each employee
