@@ -28,7 +28,7 @@ public:
 
 	//destructor
 	~PriorityQueue() {
-		Node * temp;
+		Node* temp;
 		while (head != NULL) {
 
 			temp = head;

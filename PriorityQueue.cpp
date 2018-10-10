@@ -1,5 +1,7 @@
+
 //Include Developed Libraries
 #include "PriorityQueue.h"
+
 
 template<typename t>
 inline void PriorityQueue<t>::push(Employee * e)
@@ -20,28 +22,37 @@ inline void PriorityQueue<t>::push(Employee * e)
 template<typename t>
 inline void PriorityQueue<t>::pop()
 {
-	/*  1. iterate through the line of employees
-		2. compare each item to the current high/initialized as 0;
-		3. if item is < current high, keep current high
-		4. if item is > current high, change item to new current high
-		5. make a temp var. to delete later.
-		6.  */
+	Node<Employee>* temp = head;
+	Node<Employee>* highest = head;
 
-	Node<string>* current_high = head;
-	while (current_high != NULL) {
-		if (current_high->next != NULL)
-			current_high = current_high->next;
+	//iterator to find the highest
+	while (temp != NULL) {
+		if (temp->data > highest->data)
+			highest = temp;
+		temp = temp->next;
 	}
 
-	if (current_high > current_high->next) {
-		return current_high;
-
-	else if (current_high < current_high->next)
-		current_high->next == current_high;
+	//Highest is the head
+	if (highest == head) {
+		head = head->next;
+		del highest;
 	}
 
+	//Highest at end
+	 else if (highest->next == NULL) {
+		del highest;
+	}
 
-	
+	 else {
+		temp = head;
+		//Find before highest to make it point to the next.
+		while (temp->next != highest)
+			temp = temp->next;
+
+		Node<Employee>* temp2 = highest->next;
+		temp->next = temp2;
+		del highest;
+
+	}
+	//most cases
 }
-
-

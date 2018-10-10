@@ -30,7 +30,7 @@ public:
 	void archiveBook(Book book, Date date);
 
 	//Add Employee to the list of employees
-	void addEmployee(string employeeName);
+	void addEmployee(Employee employeeName);
 	//Add Book to the list of books
-	void addBook(string bookName);
+	void addBook(Book bookName);
 };

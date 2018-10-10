@@ -1,3 +1,4 @@
+
 //include std libraries
 #include <list>
 //#include <map>
@@ -12,11 +13,11 @@ Library::Library() {
 	//Nothing to initialize
 }
 
-void Library::addBook(string bookName) {
+void Library::addBook(Book bookName) {
 	allBooks.push_front(Book(bookName));
 }
 
-void Library::addEmployee(string newEmployeeName) {
+void Library::addEmployee(Employee newEmployeeName) {
 	allEmployees.push_front(Employee(newEmployeeName));
 
 }
