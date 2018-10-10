@@ -16,7 +16,7 @@ public:
 	
 	//Constructors
 	Book();
-	Book(string bookName, Date dStart, Date dEnd);
+	Book(string bookName);
 
 	//Setters
 	void setBookName(string bookName);

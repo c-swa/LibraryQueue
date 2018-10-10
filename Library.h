@@ -1,6 +1,7 @@
 #pragma once
 //Include std libraries
 #include <string>
+#include <list>
 
 //Include developed libraries
 #include "Book.h"

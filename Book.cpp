@@ -9,10 +9,8 @@ Book::Book() {
 }
 
 //Constructor if values are known
-Book::Book(string bookName, Date dStart, Date dEnd) {
+Book::Book(string bookName) {
 	this->bookName = bookName;
-	this->dStart = dStart;
-	this->dEnd = dEnd;
 	this->archived = true;
 }
 

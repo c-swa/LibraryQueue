@@ -22,7 +22,6 @@ private:
 public:
 	//constructor
 	PriorityQueue() {
-		head = NULL;
 	};
 
 	//destructor
